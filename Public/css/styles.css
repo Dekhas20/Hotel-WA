@@ -17,6 +17,7 @@
 
 body{
     background-color: rgba(240, 248, 255, .5);
+    font-family: -apple-system, 'system-ui'
 }
 
 .carousel-inner {
