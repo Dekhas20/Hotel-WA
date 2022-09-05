@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "SancoaleSoftenedRegular";
+    src: url("../fonts/SancoaleSoftenedRegular.otf");
+}
+@font-face {
+    font-family: "SancoaleSoftenedMedium";
+    src: url("../fonts/SancoaleSoftenedMedium.otf");
+}
+@font-face {
+    font-family: "SancoaleSoftenedLight";
+    src: url("../fonts/SancoaleSoftenedLight.otf");
+}
+
+* {
+    /* font-family: 'SancoaleSoftenedRegular'; */
+}
+
+body{
+    background-color: rgba(240, 248, 255, .5);
+}
+
+.carousel-inner {
+    max-height: 35rem;
+}
+
+.habitaciones img, .service img  {
+    border-radius: 10px;
+}
+
+.service {
+    padding: 30px;
+}
+
+.service-text {
+    display: grid;
+    place-items: center;
+}
+
+.testimonio {
+    margin: 0 4%;
+    padding: 15px;
+    border: 2px solid rgb(228, 228, 228);
+    background-color: white;
+    box-shadow: 3px black;
+    border-radius: 25px;
+}
