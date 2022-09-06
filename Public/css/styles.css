@@ -1,14 +1,6 @@
-* {
-    /* font-family: 'SancoaleSoftenedRegular'; */
-}
-
 body {
     background-color: rgba(240, 248, 255, .5);
     font-family: -apple-system, 'system-ui'
-}
-
-a {
-    text-decoration: none;
 }
 
 .dropdown:hover .dropdown-menu {
