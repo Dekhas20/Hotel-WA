@@ -1,0 +1,42 @@
+:root{
+    --dark: #16191c;
+    --dark-x: #1e2126;
+    --light: #ffffff;
+
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--light);
+
+}
+
+.bg-dark { background-color: var(--dark) !important;}
+.bg-dark-x {background-color: var(--dark-x);}
+
+.form-control, .btn{
+    min-height: 3.125rem ;
+    line-height: initial;
+}
+
+.img-1{
+   background-image: url('img-3.jpg'); 
+   background-size: cover;
+   background-position: center;
+}
+
+.img-2{
+    background-image: url('img-2.jpg'); 
+    background-size: cover;
+    background-position: center;
+ }
+
+ .img-3{
+    background-image: url('img-1.jpg'); 
+    background-size: cover;
+    background-position: center;
+ }
