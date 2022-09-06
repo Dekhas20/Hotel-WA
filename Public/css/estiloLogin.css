@@ -5,6 +5,11 @@
 
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 body{
     font-family: 'Lato', sans-serif;
     font-family: 'League Spartan', sans-serif;
@@ -24,19 +29,19 @@ body{
 }
 
 .img-1{
-   background-image: url('img-3.jpg'); 
+   background-image: url('../img/img-3.jpg'); 
    background-size: cover;
    background-position: center;
 }
 
 .img-2{
-    background-image: url('img-2.jpg'); 
+    background-image: url('../img/img-2.jpg');  
     background-size: cover;
     background-position: center;
  }
 
  .img-3{
-    background-image: url('img-1.jpg'); 
+    background-image: url('../img/img-1.jpg'); 
     background-size: cover;
     background-position: center;
  }
