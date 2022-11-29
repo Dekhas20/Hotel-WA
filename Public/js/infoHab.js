@@ -1,7 +1,8 @@
 window.onload = habitacionesDisp;
-setTimeout(() => {
-    document.getElementById("btn-reservar").addEventListener("click", makeReservation);
-}, "3000")
+// setTimeout(() => {
+//     let btnReservar = document.getElementById("btn-reservar").addEventListener("click", makeReservation);
+    
+// }, "3000")
 
 let checkIn = sessionStorage.getItem('checkIn');
 let checkOut = sessionStorage.getItem('checkOut');
@@ -10,6 +11,7 @@ let children = sessionStorage.getItem('children');
 nights = (Date.parse(checkOut) - Date.parse(checkIn)) / (1000 * 60 * 60 * 24)
 
 function habitacionesDisp() {
+    validate()
 
     people = parseInt(adults) + parseInt(children)
 
@@ -27,12 +29,13 @@ function habitacionesDisp() {
 }
 
 function mostrarHab(data) {
-    console.log(data)
-    // let user = sessionStorage.getItem('user')
+    // console.log(data)
+    let user = sessionStorage.getItem('user')
 
-    // if (user == null) {
-    //     window.location.href = 'login.html'
-    // }
+    if (user == null) {
+        alert('Necesitas estar registrado para poder reservar');
+        window.location.href = 'login.html'
+    }
     let habitaciones = `<div class="row text-center">
             <div class="col mt-4 mb-4">
                 <strong style="font-size: 25px;">Habitaciones para ${adults} adultos y ${children} niños</strong>
@@ -51,17 +54,18 @@ function mostrarHab(data) {
             <div class="col">
                 <div class="card border-0 shadow mb-4" style="width: 100%; border-radius: 8px;">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-4">
                             <img src="../Public/img/hab1.jpg" class="img-fluid rounded-start"
                                 style="width: 100%; height: 100%;">
                         </div>
-                        <div class="col-9">
+                        <div class="col-8">
                             <div class="card-body">
                                 <strong class="card-title" style="font-size: 20px;">HABITACIÓN ${data[i].Numero} - PISO ${data[i].Numero.charAt(0)}</strong>
                                 <p class="card-text">${data[i].Tipo}</p>
                                 <p class="card-text">${data[i].Descripcion}</p>
                                 <p class="card-text"><strong class="text-muted"
                                         style="font: 100;color: rgb(1, 207, 1);">$${parseInt(data[i].Precio) * nights} COP por ${nights} noches</strong></p>
+                                
                                 <img src="../Public/img/wifi.png" width="25px" alt="">
                                 <img src="../Public/img/netflix.png" width="25px" alt="">
                                 <img src="../Public/img/baño.png" width="25px" alt="">
@@ -70,7 +74,8 @@ function mostrarHab(data) {
                                     <div class="col">
                                         <button type="button" class="btn btn-sm btn-primary" id="btn-reservar1"
                                             style="width: 100%; border-radius: 8px;" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop">Reservar</button>
+                                            data-bs-target="#staticBackdrop" onclick="currentHab(${data[i].id_habitacion})">Reservar</button>
+                                            
                                     </div>
                                 </div>
                             </div>
@@ -88,8 +93,17 @@ function mostrarHab(data) {
     document.getElementById('habDisponibles').innerHTML = habitaciones;
 }
 
+function currentHab (idHab){
+    sessionStorage.setItem('hab', idHab)
+}
+
 function makeReservation() {
+    // let prueba = document.getElementById("btn-reservar").nextSibling
+    // console.log(prueba)
+
     let user = sessionStorage.getItem('user')
+    let userID = sessionStorage.getItem('userID')
+    let hab = sessionStorage.getItem('hab')
 
     const token = localStorage.getItem('token')
 
@@ -97,11 +111,12 @@ function makeReservation() {
         alert('Necesitas iniciar sesión')
         window.location.href = 'login.html'
     } else {
+        console.log(userID)
         let reservation = {
             Check_in: checkIn,
             Check_out: checkOut,
-            id_habitacion: 1,
-            id_usuario: parseInt(user),
+            id_habitacion: parseInt(hab),
+            id_usuario: parseInt(userID),
             Num_adultos: parseInt(adults),
             Num_ninos: parseInt(children),
             Estado_reserva: 1,
@@ -120,6 +135,8 @@ function makeReservation() {
         })
             .then(response => response.json())
             .then(data => {
+                // console.log(data)
+                modifyHabitacion(hab);
                 let dataPost = data['data']
                 let reserva = `
                 <div class="row">
@@ -152,6 +169,30 @@ function makeReservation() {
             })
             .catch(err => console.log(err));
     }
+}
+
+function modifyHabitacion(idHab) {
+    const token = localStorage.getItem('token')
+
+    let hab = {
+        Estado: 2,
+    }
+
+    console.log(idHab)
+    fetch('http://127.0.0.1:5000/habitaciones/mod/' + idHab, {
+            method: "PUT",
+            body: JSON.stringify(hab),
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                
+            })
+            .catch(err => alert('Hubo un error, intentalo mas tarde'));
 }
 
 function inicio() {

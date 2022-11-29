@@ -43,8 +43,33 @@
                         <a class="nav-link" href="./servicios.html">SERVICIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./login.html"><img src="../Public/img/profile.png" class="d-block w-100"
-                                alt="..." style="height: 35px;"></a>
+                        <div class="container" id="sin_loguar" style="display: none;">
+                            <a class="nav-link" href="./login.html"><img src="../Public/img/profile.png"
+                                    class="d-block w-100" alt="..." style="height: 35px;"></a>
+                        </div>
+    
+                        <div class="container" id="logueado">
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link position-relative dropdown-toggle" href="#"
+                                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            MI CUENTA
+                                            
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-dark"
+                                            aria-labelledby="navbarDarkDropdownMenuLink">
+                                            <li><a class="dropdown-item" id="user-reservas" href="./misReservas.html">Mis reservas</a></li>
+                                            <li><a class="dropdown-item" id="user-cerrar" href="#">Cerrar sesión</a></li>
+                                            <li><a class="dropdown-item" id="user-abrir" style="display: none;" href="./login.html">Iniciar sesión</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+    
+    
                     </li>
                 </ul>
             </div>
@@ -232,6 +257,7 @@
     </footer>
     <!-- Footer -->
 
+    <script src="../Public/js/user.js"></script>
     <script src="../Public/js/reservar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

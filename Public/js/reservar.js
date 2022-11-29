@@ -19,6 +19,7 @@ let fecha_minimo = anio + '-' + mes + '-' + dia;
 let fecha_minimo2 = anio + '-' + mes + '-' + dia2;
 
 function minDates(){
+  validate()
     document.getElementById("dateIn").setAttribute('min',fecha_minimo);
     document.getElementById("dateOut").setAttribute('min',fecha_minimo2);
 
