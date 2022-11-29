@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container mt-3" style="width: 70%;">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color: #404040;">
+                        <span
+                            style="font-family: 'SF Pro Display', sans-serif; font-size: 30px; color:white">Registrarse</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <span>DATOS PERSONALES</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="exampleFormControlInput1" class="form-label">Nombres</label>
+                                        <input type="text" class="form-control" id="input-name"
+                                            placeholder="Digita tus nombres">
+
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
+                                        <input type="text" class="form-control" id="input-lastname"
+                                            placeholder="Digita tus apellidos">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="exampleFormControlInput1" class="form-label">Tipo de
+                                                    documento</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <select id="input-document" class="form-select form-control-sm"
+                                                    aria-label="Default select example">
+                                                    <option value="0" selected>Selecciona</option>
+                                                    <option value="CC">Cedula de ciudadania</option>
+                                                    <option value="Passport">Pasaporte</option>
+                                                    <option value="CE">Cedula de extranjeria</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleFormControlInput1" class="form-label">Documento de
+                                            identidad</label>
+                                        <input type="number" class="form-control" id="input-cc"
+                                            placeholder="Digita tu documento">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="input-email"
+                                            placeholder="Digita tu email">
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="exampleFormControlInput1" class="form-label">Edad</label>
+                                        <input type="number" class="form-control" id="input-age"
+                                            placeholder="Digita tu edad">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    
+                                    <div class="col">
+                                        <div class="col">
+                                            <label for="exampleFormControlInput1"
+                                                class="form-label">Celular</label>
+                                            <input type="number" class="form-control" id="input-phone"
+                                                placeholder="Digita tu celular">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="exampleFormControlInput1" class="form-label">Género</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <select id="input-gender" class="form-select form-control-sm"
+                                                    aria-label="Default select example">
+                                                    <option value="0" selected>Selecciona</option>
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
+                                                    <option value="None">Prefiero no decir</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <span>LUGAR DE ORIGEN</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col">
+                                        <label for="input-nationality" class="form-label">Nacionalidad</label>
+                                        <input type="text" class="form-control" id="input-nationality"
+                                            placeholder="Digita tu nacionalidad">
+                                    </div>
+                                    <div class="col">
+                                        <div class="col">
+                                            <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
+                                            <input type="text" class="form-control" id="input-city"
+                                                placeholder="Digita tu ciudad">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="col">
+                                            <label for="exampleFormControlInput1" class="form-label">Dirección</label>
+                                            <input type="text" class="form-control" id="input-address"
+                                                placeholder="Digita tu dirección">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <span>Credenciales de acceso</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col">
+                                        <label for="input-nationality" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="input-pass"
+                                            placeholder="Digita tu nacionalidad">
+                                    </div>
+                                    <div class="col">
+                                        <label for="input-nationality" class="form-label">Confirmar contraseña</label>
+                                        <input type="password" class="form-control" id="input-pass-confirm"
+                                            placeholder="Digita tu nacionalidad">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="button" id="btn-seguir" class="btn btn-success">Seguir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Usuario creado exitosamente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn btn-success" id="btn-continuar" data-bs-dismiss="modal">Continuar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdropFail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Llena todos los campos antes de continuar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn btn-success" id="btn-continuar" data-bs-dismiss="modal">Ok</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-secondary text-light mt-5">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5 pt-1">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Hotel Hialeah
+                        </h6>
+                        <p>
+                            Somos un hotel histórico ubicado en el mejor sector de la ciudad, formando parte
+                            del
+                            patrimonio nacional de Colombia.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold ">
+                            Servicios
+                        </h6>
+                        <p>
+                            <a href="./servicios.html" class="text-reset">Restaurante</a>
+                        </p>
+                        <p>
+                            <a href="./servicios.html" class="text-reset">Piscina</a>
+                        </p>
+                        <p>
+                            <a href="./servicios.html" class="text-reset">Eventos especiales</a>
+                        </p>
+                        <p>
+                            <a href="./servicios.html" class="text-reset">Gimnasio</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+                    <!-- Grid column -->
+                    <!--  -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold ">Contactanos</h6>
+                        <p><i class="fas fa-home me-3"></i> Cra 58 # 93 - 182</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            Hialeah@hotel.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> (605) 3025469</p>
+                        <p><i class="fas fa-print me-3"></i> 3015362415</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    
+    <script src="../Public/js/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

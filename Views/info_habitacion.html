@@ -36,7 +36,7 @@
                             HABITACIONES
                         </a>
                     </li>
-    
+
                     <li class="nav-item">
                         <a class="nav-link" href="./galeria.html">GALERIA</a>
                     </li>
@@ -44,152 +44,40 @@
                         <a class="nav-link" href="./servicios.html">SERVICIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./login.html"><img src="../Public/img/profile.png" class="d-block w-100"
-                                alt="..." style="height: 35px;"></a>
+                        <a class="nav-link" href="./login.html"><img src="../Public/img/profile.png"
+                                class="d-block w-100" alt="..." style="height: 35px;"></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container" style="margin-top: 100px;">
-        <div class="row text-center">
-            <div class="col mt-4 mb-4">
-                <strong style="font-size: 25px;">Reserva de habitacion Queen para 2 adultos y 1 niño</strong>
-            </div>
-        </div>
+    <div class="container" id="habDisponibles" style="margin-top: 100px;">
 
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col">
-                <div class="card border-0 shadow mb-4" style="width: 100%; border-radius: 8px;">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Public/img/hab1.jpg" class="img-fluid rounded-start"
-                                style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <strong class="card-title" style="font-size: 20px;">HABITACIÓN 301 - PISO 3</strong>
-                                <p class="card-text">Cómoda habitacion</p>
-                                <p class="card-text"><strong class="text-muted"
-                                        style="font: 100;color: rgb(1, 207, 1);">$500.000 COP</strong></p>
-                                <img src="../Public/img/wifi.png" width="25px" alt="">
-                                <img src="../Public/img/netflix.png" width="25px" alt="">
-                                <img src="../Public/img/baño.png" width="25px" alt="">
-                                <img src="../Public/img/cubiertos.png" width="25px" alt="">
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-sm btn-primary"
-                                            style="width: 100%; border-radius: 8px;">Reservar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">¿Estas seguro de hacer la reserva?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <div class="btn btn-success" id="btn-reservar" data-bs-dismiss="modal">Continuar</div>
                 </div>
             </div>
-            <div class="col-2"></div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col">
-                <div class="card border-0 shadow mb-4" style="width: 100%; border-radius: 8px;">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Public/img/hab1.jpg" class="img-fluid rounded-start"
-                                style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <strong class="card-title" style="font-size: 20px;">HABITACIÓN 301 - PISO 3</strong>
-                                <p class="card-text">Cómoda habitacion</p>
-                                <p class="card-text"><strong class="text-muted"
-                                        style="font: 100;color: rgb(1, 207, 1);">$500.000 COP</strong></p>
-                                <img src="../Public/img/wifi.png" width="25px" alt="">
-                                <img src="../Public/img/netflix.png" width="25px" alt="">
-                                <img src="../Public/img/baño.png" width="25px" alt="">
-                                <img src="../Public/img/cubiertos.png" width="25px" alt="">
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-sm btn-primary"
-                                            style="width: 100%; border-radius: 8px;">Reservar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col">
-                <div class="card border-0 shadow mb-4" style="width: 100%; border-radius: 8px;">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Public/img/hab1.jpg" class="img-fluid rounded-start"
-                                style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <strong class="card-title" style="font-size: 20px;">HABITACIÓN 301 - PISO 3</strong>
-                                <p class="card-text">Cómoda habitacion</p>
-                                <p class="card-text"><strong class="text-muted"
-                                        style="font: 100;color: rgb(1, 207, 1);">$500.000 COP</strong></p>
-                                <img src="../Public/img/wifi.png" width="25px" alt="">
-                                <img src="../Public/img/netflix.png" width="25px" alt="">
-                                <img src="../Public/img/baño.png" width="25px" alt="">
-                                <img src="../Public/img/cubiertos.png" width="25px" alt="">
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-sm btn-primary"
-                                            style="width: 100%; border-radius: 8px;">Reservar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col">
-                <div class="card border-0 shadow mb-4" style="width: 100%; border-radius: 8px;">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="../Public/img/hab1.jpg" class="img-fluid rounded-start"
-                                style="width: 100%; height: 100%;">
-                        </div>
-                        <div class="col-9">
-                            <div class="card-body">
-                                <strong class="card-title" style="font-size: 20px;">HABITACIÓN 301 - PISO 3</strong>
-                                <p class="card-text">Cómoda habitacion</p>
-                                <p class="card-text"><strong class="text-muted"
-                                        style="font: 100;color: rgb(1, 207, 1);">$500.000 COP</strong></p>
-                                <img src="../Public/img/wifi.png" width="25px" alt="">
-                                <img src="../Public/img/netflix.png" width="25px" alt="">
-                                <img src="../Public/img/baño.png" width="25px" alt="">
-                                <img src="../Public/img/cubiertos.png" width="25px" alt="">
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-sm btn-primary"
-                                            style="width: 100%; border-radius: 8px;">Reservar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-        </div>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="../Public/js/infoHab.js"></script>
 </body>
+
+</html>

@@ -1,4 +1,4 @@
-:root{
+:root {
     --dark: #16191c;
     --dark-x: #1e2126;
     --light: #ffffff;
@@ -10,7 +10,7 @@ a {
     color: black;
 }
 
-body{
+body {
     font-family: 'Lato', sans-serif;
     font-family: 'League Spartan', sans-serif;
     font-family: 'Lobster', cursive;
@@ -20,33 +20,41 @@ body{
 
 }
 
-.bg-dark { background-color: var(--dark) !important;}
-.bg-dark-x {background-color: var(--dark-x);}
+.bg-dark {
+    background-color: var(--dark) !important;
+}
 
-.form-control, .btn{
-    min-height: 3.125rem ;
+.bg-dark-x {
+    background-color: var(--dark-x);
+    color: var(--light);
+}
+
+.form-control,
+.btn {
+    min-height: 3.125rem;
     line-height: initial;
 }
 
-.img-1{
-   background-image: url('../img/img-3.jpg'); 
-   background-size: cover;
-   background-position: center;
+.img-1 {
+    background-image: url('../img/img-3.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.img-2{
-    background-image: url('../img/img-2.jpg');  
+.img-2 {
+    background-image: url('../img/img-2.jpg');
     background-size: cover;
     background-position: center;
- }
+}
 
- .img-3{
-    background-image: url('../img/img-1.jpg'); 
+.img-3 {
+    background-image: url('../img/img-1.jpg');
     background-size: cover;
     background-position: center;
- }
+}
 
- .button-log {
+.button-log {
+    cursor: pointer;
     font: bold 20px Arial;
     border-radius: 20px;
     text-decoration: none;
@@ -57,4 +65,5 @@ body{
     border-right: 1px solid #333333;
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
-  }
+    text-align: center;
+}
