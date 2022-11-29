@@ -74,7 +74,7 @@ function mostrarHab(data) {
                                     <div class="col">
                                         <button type="button" class="btn btn-sm btn-primary" id="btn-reservar1"
                                             style="width: 100%; border-radius: 8px;" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop" onclick="currentHab(${data[i].id_habitacion})">Reservar</button>
+                                            data-bs-target="#staticBackdrop" onclick="currentHab(${data[i].id_habitacion}, ${parseInt(data[i].Precio) * nights})">Reservar</button>
                                             
                                     </div>
                                 </div>
@@ -93,8 +93,9 @@ function mostrarHab(data) {
     document.getElementById('habDisponibles').innerHTML = habitaciones;
 }
 
-function currentHab (idHab){
+function currentHab (idHab, total){
     sessionStorage.setItem('hab', idHab)
+    sessionStorage.setItem('total', total)
 }
 
 function makeReservation() {
@@ -104,6 +105,7 @@ function makeReservation() {
     let user = sessionStorage.getItem('user')
     let userID = sessionStorage.getItem('userID')
     let hab = sessionStorage.getItem('hab')
+    let total = sessionStorage.getItem('total')
 
     const token = localStorage.getItem('token')
 
@@ -120,7 +122,7 @@ function makeReservation() {
             Num_adultos: parseInt(adults),
             Num_ninos: parseInt(children),
             Estado_reserva: 1,
-            Total: 150000
+            Total: total
         }
 
         console.log(reservation)

@@ -41,7 +41,7 @@ function getIdUser(user) {
         .then(data => {
             data = data['data']
             sessionStorage.setItem('userID', data[0].id_usuario)
-            // console.log(data[0].id_usuario)
+            console.log(data[0].id_usuario)
         })
         .catch(err => console.log(err));
 }
